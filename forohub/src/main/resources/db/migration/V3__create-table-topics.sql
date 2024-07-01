@@ -1,8 +1,8 @@
 CREATE TABLE topics(
 
     id BIGINT NOT NULL AUTO_INCREMENT,
-    title VARCHAR(100) NOT NULL,
-    message VARCHAR(100) NOT NULL,
+    title VARCHAR(100) NOT NULL UNIQUE ,
+    message VARCHAR(100) NOT NULL UNIQUE ,
     creation_date DATETIME,
     status VARCHAR(100),
     user_id BIGINT NOT NULL ,
