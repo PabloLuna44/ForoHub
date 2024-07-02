@@ -33,4 +33,16 @@ public class Topic
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Course course;
+
+
+    public Topic(String title,String message,LocalDateTime creation_date,Status status,User user,Course course){
+
+        this.title=title;
+        this.message=message;
+        this.creation_date=creation_date;
+        this.status=status;
+        this.user=user;
+        this.course=course;
+
+    }
 }

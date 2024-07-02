@@ -47,7 +47,7 @@ public class TokenService {
         try {
             Algorithm algorithm = Algorithm.HMAC256(JWT_SECRET);
             verifier = JWT.require(algorithm)
-                    .withIssuer("voll med")
+                    .withIssuer("forohub")
                     .build()
                     .verify(token);
             verifier.getSubject();
