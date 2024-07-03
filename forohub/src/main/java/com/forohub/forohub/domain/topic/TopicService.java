@@ -6,8 +6,10 @@ import com.forohub.forohub.domain.user.User;
 import com.forohub.forohub.domain.user.UserRepository;
 import com.forohub.forohub.infra.errors.IntegrityValidation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import org.springframework.data.domain.Pageable;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
@@ -37,7 +39,12 @@ public class TopicService {
         }
 
         Topic newTopic=new Topic(topic.title(),topic.message(),date,Status.ANGRY,user.get(),course.get());
+        topicRepository.save(newTopic);
         return newTopic;
+    }
+
+    public Page<TopicResponseDTO> findAll(Pageable pageable){
+        return topicRepository.findAll(pageable).map(TopicResponseDTO::new);
     }
 
 

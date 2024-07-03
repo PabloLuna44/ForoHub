@@ -24,7 +24,7 @@ public class Topic
     private Long id;
     private String title;
     private String message;
-    private LocalDateTime creation_date;
+    private LocalDateTime creationDate;
     @Enumerated(EnumType.STRING)
     private Status status;
 
@@ -35,11 +35,11 @@ public class Topic
     private Course course;
 
 
-    public Topic(String title,String message,LocalDateTime creation_date,Status status,User user,Course course){
+    public Topic(String title,String message,LocalDateTime creationDate,Status status,User user,Course course){
 
         this.title=title;
         this.message=message;
-        this.creation_date=creation_date;
+        this.creationDate=creationDate;
         this.status=status;
         this.user=user;
         this.course=course;
