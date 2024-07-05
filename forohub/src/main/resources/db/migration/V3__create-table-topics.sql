@@ -4,7 +4,7 @@ CREATE TABLE topics(
     title VARCHAR(100) NOT NULL UNIQUE ,
     message VARCHAR(100) NOT NULL UNIQUE ,
     creation_date DATETIME,
-    status VARCHAR(100),
+    status TINYINT,
     user_id BIGINT NOT NULL ,
     course_id BIGINT NOT NULL,
 

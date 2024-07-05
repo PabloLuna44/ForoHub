@@ -25,8 +25,7 @@ public class Topic
     private String title;
     private String message;
     private LocalDateTime creationDate;
-    @Enumerated(EnumType.STRING)
-    private Status status;
+    private Boolean status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
@@ -35,14 +34,36 @@ public class Topic
     private Course course;
 
 
-    public Topic(String title,String message,LocalDateTime creationDate,Status status,User user,Course course){
+    public Topic(String title,String message,LocalDateTime creationDate,User user,Course course){
 
         this.title=title;
         this.message=message;
         this.creationDate=creationDate;
-        this.status=status;
+        this.status=true;
         this.user=user;
         this.course=course;
 
+    }
+
+    public void update(String title,String message,Boolean status,Course course){
+
+        if(title!=null){
+            this.title=title;
+        }
+        if(message!=null){
+            this.message=message;
+        }
+        if (status != null){
+            this.status=status;
+        }
+        if(course!=null){
+            this.course=course;
+        }
+        this.creationDate=LocalDateTime.now();
+
+    }
+
+    public void setStatus(Boolean status){
+        this.status=status;
     }
 }
