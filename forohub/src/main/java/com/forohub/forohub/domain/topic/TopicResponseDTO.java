@@ -9,7 +9,8 @@ public record TopicResponseDTO(
         Long id,
         String title,
         String message,
-        LocalDateTime CreationDate,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
         UserResponseDTO user,
         CourseResponseDTO course
 
@@ -19,7 +20,8 @@ public record TopicResponseDTO(
             topic.getId(),
             topic.getTitle(),
             topic.getMessage(),
-            topic.getCreationDate(),
+            topic.getCreatedAt(),
+            topic.getUpdatedAt(),
             new UserResponseDTO(topic.getUser()),
             new CourseResponseDTO(topic.getCourse())
         );

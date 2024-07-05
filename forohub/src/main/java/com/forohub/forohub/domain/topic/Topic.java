@@ -24,7 +24,8 @@ public class Topic
     private Long id;
     private String title;
     private String message;
-    private LocalDateTime creationDate;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
     private Boolean status;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -38,7 +39,7 @@ public class Topic
 
         this.title=title;
         this.message=message;
-        this.creationDate=creationDate;
+        this.createdAt=creationDate;
         this.status=true;
         this.user=user;
         this.course=course;
@@ -59,7 +60,7 @@ public class Topic
         if(course!=null){
             this.course=course;
         }
-        this.creationDate=LocalDateTime.now();
+        this.updatedAt=LocalDateTime.now();
 
     }
 

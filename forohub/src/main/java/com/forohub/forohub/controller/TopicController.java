@@ -5,6 +5,7 @@ import com.forohub.forohub.domain.topic.TopicNewDTO;
 import com.forohub.forohub.domain.topic.TopicResponseDTO;
 import com.forohub.forohub.domain.topic.TopicService;
 import com.forohub.forohub.domain.topic.TopicUpdateDTO;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import org.springframework.data.domain.Pageable;
 
 @RestController
 @RequestMapping("/topic")
+@SecurityRequirement(name = "bearer-key")
 public class TopicController {
 
 
