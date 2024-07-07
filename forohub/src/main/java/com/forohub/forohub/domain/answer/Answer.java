@@ -21,7 +21,8 @@ public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String answer;
+    private String comment;
+    private Boolean status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -32,4 +33,21 @@ public class Answer {
     private Topic topic;
 
 
+    public Answer(String comment, Boolean status, LocalDateTime createdAt, LocalDateTime updatedAt, User user, Topic topic) {
+        this.comment = comment;
+        this.status = status;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.user = user;
+        this.topic = topic;
+    }
+
+    public void update(String comment,Boolean status){
+        this.comment=comment;
+        this.status=status;
+    }
+
+    public void setStatus(Boolean status){
+        this.status=status;
+    }
 }
