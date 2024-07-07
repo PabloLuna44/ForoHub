@@ -1,9 +1,10 @@
 CREATE TABLE answers(
 
     id BIGINT NOT NULL AUTO_INCREMENT,
-    answer VARCHAR(100) NOT NULL ,
+    comment VARCHAR(100) NOT NULL ,
     created_at DATETIME,
     updated_at DATETIME,
+    status TINYINT,
     user_id BIGINT NOT NULL,
     topic_id BIGINT NOT NULL ,
 
