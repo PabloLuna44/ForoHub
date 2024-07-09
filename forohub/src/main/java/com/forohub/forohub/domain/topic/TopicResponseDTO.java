@@ -17,13 +17,13 @@ public record TopicResponseDTO(
 ) {
     public TopicResponseDTO(Topic topic){
         this(
-            topic.getId(),
-            topic.getTitle(),
-            topic.getMessage(),
-            topic.getCreatedAt(),
-            topic.getUpdatedAt(),
-            new UserResponseDTO(topic.getUser()),
-            new CourseResponseDTO(topic.getCourse())
+                topic.getId(),
+                topic.getTitle(),
+                topic.getMessage(),
+                topic.getCreatedAt(),
+                topic.getUpdatedAt(),
+                new UserResponseDTO(topic.getUser()),
+                new CourseResponseDTO(topic.getCourse())
         );
     }
 }

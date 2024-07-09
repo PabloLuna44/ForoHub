@@ -37,7 +37,7 @@ public class AnswerService {
             throw new IntegrityValidation("User Not Found");
         }
 
-        Answer answer=new Answer(answerNew.comment(),answerNew.status(),answerNew.createdAt(),answerNew.updatedAt(),user.get(),topic.get());
+        Answer answer=new Answer(answerNew.comment(),answerNew.createdAt(),answerNew.updatedAt(),user.get(),topic.get());
 
         return answer;
     }
@@ -66,7 +66,7 @@ public class AnswerService {
             throw new IntegrityValidation("Answer Not Found");
         }
 
-        answer.update(answerUpdatedDTO.comment(),answerUpdatedDTO.status());
+        answer.update(answerUpdatedDTO);
 
         return answer;
     }

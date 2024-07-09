@@ -33,21 +33,32 @@ public class Answer {
     private Topic topic;
 
 
-    public Answer(String comment, Boolean status, LocalDateTime createdAt, LocalDateTime updatedAt, User user, Topic topic) {
+    public Answer(String comment, LocalDateTime createdAt, LocalDateTime updatedAt, User user, Topic topic) {
         this.comment = comment;
-        this.status = status;
+        this.status = true;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.user = user;
         this.topic = topic;
     }
 
-    public void update(String comment,Boolean status){
-        this.comment=comment;
-        this.status=status;
+    public void update(AnswerUpdatedDTO answerUpdatedDTO){
+
+
+        if(answerUpdatedDTO.status()) {
+            this.status = answerUpdatedDTO.status();
+        }
+        if(answerUpdatedDTO.comment()!=null){
+            this.comment=answerUpdatedDTO.comment();
+        }
+
+        this.updatedAt=LocalDateTime.now();
+
     }
 
     public void setStatus(Boolean status){
         this.status=status;
+        this.updatedAt=LocalDateTime.now();
+
     }
 }

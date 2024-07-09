@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 
 public record AnswerResponseDTO (
 
+        Long id,
         String comment,
-        Boolean status,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 
@@ -16,8 +16,8 @@ public record AnswerResponseDTO (
 
     public AnswerResponseDTO(Answer answer){
         this(
+            answer.getId(),
             answer.getComment(),
-            answer.getStatus(),
             answer.getCreatedAt(),
             answer.getUpdatedAt()
         );

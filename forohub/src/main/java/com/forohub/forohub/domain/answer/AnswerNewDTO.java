@@ -13,8 +13,6 @@ public record AnswerNewDTO (
          @NotBlank
          String comment,
          @NotBlank
-         Boolean status,
-         @NotBlank
          LocalDateTime createdAt,
          @NotBlank
          LocalDateTime updatedAt,
