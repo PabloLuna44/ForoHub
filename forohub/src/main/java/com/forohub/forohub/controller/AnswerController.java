@@ -46,6 +46,12 @@ public class AnswerController {
         return ResponseEntity.ok(answerResponseDTO);
     }
 
+    @GetMapping("/topic/{id}")
+    public ResponseEntity<Page<AnswerResponseDTO>> findById(@PathVariable Long id,@PageableDefault Pageable pageable) {
+        return ResponseEntity.ok(answerService.findByTopic(id,pageable));
+    }
+
+
 
     @PutMapping
     @Transactional

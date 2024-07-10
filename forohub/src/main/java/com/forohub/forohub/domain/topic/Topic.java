@@ -65,5 +65,6 @@ public class Topic
 
     public void setStatus(Boolean status){
         this.status=status;
+        this.updatedAt=LocalDateTime.now();
     }
 }

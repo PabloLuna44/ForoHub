@@ -37,15 +37,27 @@ public class AnswerService {
             throw new IntegrityValidation("User Not Found");
         }
 
-        Answer answer=new Answer(answerNew.comment(),answerNew.status(),answerNew.createdAt(),answerNew.updatedAt(),user.get(),topic.get());
+        Answer answer=new Answer(answerNew.comment(),user.get(),topic.get());
 
-        return answer;
+        return answerRepository.save(answer);
     }
 
     public Page<AnswerResponseDTO> findAll(Pageable pageable){
 
         return answerRepository.findByStatusTrue(pageable).map(AnswerResponseDTO::new);
 
+    }
+
+    public Page<AnswerResponseDTO> findByTopic(Long id,Pageable pageable){
+
+        Optional<Topic> topic=topicRepository.findById(id);
+
+        if(topic.isEmpty()){
+            throw new IntegrityValidation("Topic Not Found");
+        }
+
+
+        return answerRepository.findByTopic(topic.get(),pageable).map(AnswerResponseDTO::new);
     }
 
     public Answer findById(Long id){
@@ -66,7 +78,7 @@ public class AnswerService {
             throw new IntegrityValidation("Answer Not Found");
         }
 
-        answer.update(answerUpdatedDTO.comment(),answerUpdatedDTO.status());
+        answer.update(answerUpdatedDTO);
 
         return answer;
     }

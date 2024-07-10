@@ -12,12 +12,6 @@ import java.time.LocalDateTime;
 public record AnswerNewDTO (
          @NotBlank
          String comment,
-         @NotBlank
-         Boolean status,
-         @NotBlank
-         LocalDateTime createdAt,
-         @NotBlank
-         LocalDateTime updatedAt,
          @NotNull
          Long  user_id,
          @NotNull

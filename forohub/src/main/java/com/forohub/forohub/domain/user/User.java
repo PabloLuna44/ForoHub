@@ -9,6 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
@@ -28,6 +29,9 @@ public class User implements UserDetails
     private String username;
     private String email;
     private String password;
+    private Boolean status;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public User(String name, String last_name, String username, String email, String pwdEncode) {
         this.name=name;
@@ -35,6 +39,8 @@ public class User implements UserDetails
         this.username=username;
         this.email=email;
         this.password=pwdEncode;
+        this.createdAt=LocalDateTime.now();
+        this.status=true;
     }
 
     public String getUsername1(){
