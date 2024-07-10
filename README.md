@@ -37,15 +37,18 @@
 ---
 
 ## 📄Requisitos
+Nuestra API se centrará específicamente en los tópicos, y debe permitir a los usuarios:
 
-- Configuración del Ambiente Java
-- Creación del Proyecto
 - Consumo de la API
-- Análisis de la Respuesta JSON
-- Creación de Objetos 
-- Mapeo de objetos en la base de datos
-- Creación de repositorio
-- Inserción y consulta en la base de datos
+- Crear un nuevo tópico
+- Mostrar todos los tópicos creados;
+- Mostrar un tópico específico;
+- Actualizar un tópico;
+- Eliminar un tópico.
+
+
+
+
 
 
 
