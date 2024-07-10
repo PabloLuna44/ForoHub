@@ -14,13 +14,6 @@
 ---
 
 ## Descripción
-
-
-<div align="center">
-  <img src="https://github.com/PabloLuna44/Java-Challenge-Conversor-de-Monedas/assets/119721670/a7e2e95d-f132-4098-a3cf-79ec75902792">
-</div>
-
-
 <p align="justify">
 Un foro es un espacio donde todos los participantes de una plataforma pueden plantear sus preguntas sobre determinados tópicos. Aquí en Alura Latam, los estudiantes utilizan el foro para sacar sus dudas sobre los cursos y proyectos en los que participan. Este lugar mágico está lleno de mucho aprendizaje y colaboración entre estudiantes, profesores y moderadores.
 </p>
@@ -32,6 +25,13 @@ Ya sabemos para qué sirve el foro y conocemos su aspecto, ¿pero sabemos cómo 
 <p align="justify">
 Este es nuestro desafío, llamado ForoHub: en él, vamos a replicar este proceso a nivel de back end y, para eso, crearemos una API REST usando Spring.
 </p>
+
+<div align="center">
+  <img src="https://github.com/PabloLuna44/Java-Challenge-Conversor-de-Monedas/assets/119721670/a7e2e95d-f132-4098-a3cf-79ec75902792">
+</div>
+
+
+
 
 
 ## 📚Índice
