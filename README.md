@@ -56,26 +56,31 @@
 
 ### 🎓 Cursos
 - [Curso Online Java: trabajando con lambdas, streams y Spring Framework | Alura](https://www.aluracursos.com/curso-online-java-trabajando-lambdas-streams-spring-framework)
-- [Curso Online Java: persistencia de datos y consultas con Spring Data JPA | Alura](https://app.aluracursos.com/course/java-persistencia-datos-consultas-spring-data-jpa?utm_source=gnarus&utm_medium=timeline)
+- [Curso Online Spring Boot 3: desarrollar una API Rest en Java | Alura](https://app.aluracursos.com/course/spring-boot-3-desarrollar-api-rest-java)
+- [Curso Online Spring Boot 3: aplique las mejores prácticas y proteja una API Rest | Alura](https://app.aluracursos.com/course/spring-boot-3-aplique-practicas-proteja-api-rest)
+- [Curso Online Git y GitHub: repositorio, commit y versiones | Alura](https://app.aluracursos.com/course/git-github-repositorio-commit-versiones)
+
+
 
 ### 🎓 Articulos
 - [¿Qué es Maven? | Alura Cursos Online](https://www.aluracursos.com/blog/que-es-maven)
 - [Spring: Conozca este framework de Java | Alura Cursos Online](https://www.aluracursos.com/blog/spring-conozca-framework-java)
 - [Empezando con Spring Framework | Alura Cursos Online](https://www.aluracursos.com/blog/empezando-con-spring-framework)
-- [¿Que es Json? | Alura Cursos Online](https://www.aluracursos.com/blog/que-es-json)
 - [IntelliJ IDEA para principiantes | Alura Cursos Online](https://www.aluracursos.com/blog/intellij-idea-para-principiantes)
+- [MySQL: desde la descarga e instalación hasta su primera tabla | Alura Cursos Online](https://www.aluracursos.com/blog/mysql-desde-la-descarga-e-instalacion-hasta-su-primera-tabla)
 - [Evite NullPointerException en Java | Alura Cursos Online](https://www.aluracursos.com/blog/evite-nullpointerexception-en-Java)
 - [Entendiendo el Lazy y el Eager Load de JPA | Alura Cursos Online](https://www.aluracursos.com/blog/entendiendo-el-lazy-y-el-eager-load-de-jpa)
-- [Bases de datos relacionales | Alura Cursos Online](https://www.aluracursos.com/blog/base-de-datos-relacional)
+- [REST: Concepto y Fundamentos | Alura Cursos Online](https://www.aluracursos.com/blog/rest-concepto-y-fundamentos)
 
 
 
 
 
 ### 🎓 Alura +
-- [¿Qué es la Programación Orientada a Objetos?](https://www.youtube.com/watch?v=Oigen2sjagk&t=1s&ab_channel=AluraLatam)
-- [Camino hacia el éxito como desarrollador Java #Aluratips](https://www.youtube.com/watch?v=zOetOoeOrOg&t=2s&ab_channel=AluraLatam)
+- [De la Creación al Borrado: Descubre el Poder del CRUD en el Desarrollo de Aplicaciones](https://www.youtube.com/watch?v=jr_98HCSTZc&ab_channel=AluraLatam)
+- [Descomplicando Base de Datos | #Aluramás](https://www.youtube.com/watch?v=G1cDRqKuxpg&t=3s&ab_channel=AluraLatam)
 - [Spring Framework. ¿Qué es ? #AluraMás](https://www.youtube.com/watch?v=t-iqt1b2qqk&t=62s&ab_channel=AluraLatam)
+- [Git y GitHub: Herramientas Esenciales para el Control de Versiones y Colaboración en Desarrollo](https://www.youtube.com/watch?v=dw04N616Abw&t=1s&ab_channel=AluraLatam)
 
 ---
 
