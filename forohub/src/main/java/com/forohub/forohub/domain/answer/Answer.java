@@ -33,11 +33,10 @@ public class Answer {
     private Topic topic;
 
 
-    public Answer(String comment, LocalDateTime createdAt, LocalDateTime updatedAt, User user, Topic topic) {
+    public Answer(String comment, User user, Topic topic) {
         this.comment = comment;
         this.status = true;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+        this.createdAt = LocalDateTime.now();
         this.user = user;
         this.topic = topic;
     }
@@ -45,7 +44,7 @@ public class Answer {
     public void update(AnswerUpdatedDTO answerUpdatedDTO){
 
 
-        if(answerUpdatedDTO.status()) {
+        if(answerUpdatedDTO.status()!=null) {
             this.status = answerUpdatedDTO.status();
         }
         if(answerUpdatedDTO.comment()!=null){

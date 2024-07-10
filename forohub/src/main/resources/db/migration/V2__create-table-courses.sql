@@ -4,8 +4,8 @@ CREATE TABLE courses(
     title VARCHAR(100) NOT NULL ,
     description VARCHAR(100) NOT NULL ,
     status TINYINT,
-    createdAt DATETIME,
-    updatedAt DATETIME,
+    created_at DATETIME,
+    updated_at DATETIME,
 
     PRIMARY KEY (id)
 );

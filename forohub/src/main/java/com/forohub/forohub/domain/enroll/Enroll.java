@@ -1,4 +1,4 @@
-package com.forohub.forohub.domain.user_course;
+package com.forohub.forohub.domain.enroll;
 
 import com.forohub.forohub.domain.course.Course;
 import com.forohub.forohub.domain.user.User;
@@ -12,21 +12,29 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name="user_course")
+@Table(name="enroll")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @EqualsAndHashCode(of="id")
-public class UserCourse {
+public class Enroll {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDateTime createdAt;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    private List<User> user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    private List<User> course;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Course course;
+
+
+    public Enroll(User user, Course course){
+        this.user=user;
+        this.course=course;
+    }
+
+
 }

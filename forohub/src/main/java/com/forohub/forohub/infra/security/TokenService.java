@@ -52,7 +52,6 @@ public class TokenService {
                     .verify(token);
             verifier.getSubject();
         } catch (JWTVerificationException exception){
-            System.out.println(exception.toString());
             throw new RuntimeException("Invalid token", exception);
         }
 

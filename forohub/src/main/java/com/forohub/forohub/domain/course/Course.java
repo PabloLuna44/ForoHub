@@ -43,7 +43,7 @@ public class Course
         if(courseUpdateDTO.description()!=null){
             this.description=courseUpdateDTO.description();
         }
-        if(courseUpdateDTO.status()){
+        if(courseUpdateDTO.status()!=null){
             this.status=courseUpdateDTO.status();
         }
         this.updatedAt=LocalDateTime.now();

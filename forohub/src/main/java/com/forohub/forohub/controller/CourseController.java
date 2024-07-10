@@ -30,7 +30,6 @@ public class CourseController {
     @PostMapping
     @Transactional
     public ResponseEntity<CourseResponseDTO> create(@RequestBody @Valid CourseNewDTO course) {
-
         CourseResponseDTO courseResponseDTO=new CourseResponseDTO(courseService.save(course));
         return ResponseEntity.ok(courseResponseDTO);
     }

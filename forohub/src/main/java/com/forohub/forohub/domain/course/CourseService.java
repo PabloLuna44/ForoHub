@@ -30,7 +30,7 @@ public class CourseService {
 
     public Course findById(Long id){
 
-        Optional<Course> course=courseRepository.findById(id);
+        Optional<Course> course=courseRepository.findByIdAndStatusTrue(id);
 
         if(course.isEmpty()){
             throw new IntegrityValidation("Course Not Found");
