@@ -243,24 +243,16 @@ Course Controller
 Enroll
 #### 
 - Post
+  
 ![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/ed211a40-64e1-49cc-b47c-c6605bb6ac7c)
+
 ![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/6ab85c4f-3655-4dae-a4da-97cd3f9177ac)
 
--
+-Get
 
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/717cf63a-04ed-468b-9351-4eb2303f8e25)
 
-### ✅ `Funcionalidad 6:` 
-#### 
-![image]()
-
-### ✅ `Funcionalidad 7:` 
-#### 
-![image]()
-
-### ✅ `Funcionalidad 8:` 
-#### 
-![image]()
-
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/c6e4e1f0-6a6c-48f0-a6af-7d55db7e4217)
 
 
 
