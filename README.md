@@ -3,7 +3,7 @@
 
 
 <div align="center">
-  <img src="https://github.com/PabloLuna44/ForoHub/assets/119721670/a4a56de8-fa80-4f0f-826d-0eadf1d407e5" width="400" height="400">
+  <img src="https://github.com/PabloLuna44/ForoHub/assets/119721670/a4a56de8-fa80-4f0f-826d-0eadf1d407e5" width="600" height="400">
 </div>
 
 
