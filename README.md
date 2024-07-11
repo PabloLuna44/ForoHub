@@ -1,8 +1,9 @@
-![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/8ab57279-63f5-4ff1-99cf-6c6737442658)﻿# Forohub-Challenge-Java
+# Forohub-Challenge-Java
+
 
 
 <div align="center">
-  <img src="" width="400" height="400">
+  <img src="https://github.com/PabloLuna44/ForoHub/assets/119721670/a4a56de8-fa80-4f0f-826d-0eadf1d407e5" width="400" height="400">
 </div>
 
 
@@ -261,7 +262,7 @@ Enroll
 
 ## Conclusión
 
-
+En desarrollo de este challenge aplique todo el conocimiento proporcionado por los cursos, lo cual abarca desde la implementacion y modelado del sistema realizar el mapeamiento de entidades de la base de datos utilizado SpringJPA , implementacion de rutas para acceder a diferentes recursos de la API como metodos POST, GET, PUT, DELETE para el consumo de la API, como la implementacion de seguridad mediante la autenticacion de un JWT para el acceso a las rutas de la API con el uso de SpringSecurity, implementacion de SpringDoc para crear la documentacion de la API y la realizacion de Test para las diferentes rutas de la API para su correcta funcionabilodad.
 
 ---
 ## Colaboradores 
@@ -271,7 +272,8 @@ Enroll
 ---
 
 ## Insignias
-![badge literalura]()
+![Badge-Spring](https://github.com/PabloLuna44/ForoHub/assets/119721670/987e0f31-38ee-456b-8409-e8f79b5dcf6c)
+
 
 
 
