@@ -138,7 +138,7 @@ Topic Controller
 ![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/2f7ecc00-d1f9-42fe-9e01-d0b1bc38075d)
 
 
--Get by Id
+- Get by Id
 
 ![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/5cb444af-a482-4c3f-8462-b2add04916d6)
 
@@ -160,16 +160,94 @@ Topic Controller
 
 
 ### ✅ `Funcionalidad 3:` 
+Answer Controller
   #### 
-![image]()
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/3f8de4b4-51d4-47fb-92d5-68570fe2a67e)
+
+- Post
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/f524fe0e-2def-4223-b6e9-4c0441bdfac8)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/a6b5f9c0-19b8-4000-964b-c73bb539a18e)
+
+- Get
+  
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/a8c6017d-1704-486c-b1bc-93b65ee61c8a)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/4c5fbe9d-253b-48d9-8d23-2d78d7b7bb27)
+
+- Get By Id
+  
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/e4e99ff9-2d0e-403c-8d5e-c9b1caa03e93)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/daece7c1-c336-4e47-ba25-5e2bdd45801a)
+
+
+- Get By Topic
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/a3f63877-5a01-4566-abf6-a24ca2f7416a)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/0296170c-e5a0-47e2-9235-3b22e0349348)
+
+- Put
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/c91fc918-ad69-48e8-a5dc-71d0ed50dfbb)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/432b400b-5965-46c5-bbc7-2b12d5880b09)
+
+  
+- Delete
+  
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/7487c712-e7db-463a-afca-cdc978afd60f)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/fba69f80-268c-4353-8399-2164038ea31f)
+
+
+  
 
 ### ✅ `Funcionalidad 4:` 
+Course Controller
 #### 
-![image]()
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/91102054-1ab2-426c-8e05-447014f774a5)
+
+- Post
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/21b9cd7c-3ce2-461b-8e4a-c6b6a7008d35)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/c915af08-4a10-4316-a48f-eb08c9ff1de4)
+
+
+- Get
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/e8e1a4ca-edd9-4235-b20d-5d741026db11)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/83a3a7f7-78a4-4267-aea1-3eab0334db0c)
+
+  
+- Put
+  
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/650a20b1-8b81-4017-99ea-3c34b2081249)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/fe3b74ba-18a8-4c39-a421-f98793bf38af)
+
+  
+- Delete
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/9c41a054-33e4-4f88-8692-cd9a21f38c6b)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/184504dd-e779-4838-b70a-be3328a899d0)
+
+
+
+
 
 ### ✅ `Funcionalidad 5:` 
+Enroll
 #### 
-![image]()
+- Post
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/ed211a40-64e1-49cc-b47c-c6605bb6ac7c)
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/6ab85c4f-3655-4dae-a4da-97cd3f9177ac)
+
+-
+
 
 ### ✅ `Funcionalidad 6:` 
 #### 
