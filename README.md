@@ -126,19 +126,36 @@ Topic Controller
 ![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/6a4096f1-b981-441e-b898-5f52ddc61e91)
 
 - Post
+  
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/33d39399-f99e-4ab2-99fd-8e759c328223)
 
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/92219693-26aa-4c04-a2cc-560137caf98d)
 
 - Get
+  
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/5887c71d-178f-4e2f-b579-3668e9c7f546)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/2f7ecc00-d1f9-42fe-9e01-d0b1bc38075d)
 
 
 -Get by Id
 
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/5cb444af-a482-4c3f-8462-b2add04916d6)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/4948b74c-e3e8-477b-96b8-d5b3b2d00a66)
 
 
 - Put
+  
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/f3e6a31c-8d8a-43e5-83c2-366fd36b854a)
 
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/556bb56c-2567-44d5-8102-cc28749601b6)
 
 - Delete
+  
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/5c28e646-1339-4624-b243-53bc3ee9637c)
+
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/2c9b2d50-2841-4f11-adef-a46ef8b44423)
 
 
 
