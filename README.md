@@ -1,4 +1,4 @@
-﻿# Forohub-Challenge-Java
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/8ab57279-63f5-4ff1-99cf-6c6737442658)﻿# Forohub-Challenge-Java
 
 
 <div align="center">
@@ -61,9 +61,6 @@ Nuestra API se centrará específicamente en los tópicos, y debe permitir a los
 
 
 
-
-
-
 ---
 
 ## 📌Recursos 
@@ -109,12 +106,46 @@ Nuestra API se centrará específicamente en los tópicos, y debe permitir a los
 ##  🖥️ Funcionalidades del proyecto
 
 ### ✅ `Funcionalidad 1:`
+Authentication Controller
  ####
-![image]()
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/8ecc53ef-b27d-443b-be72-810367da9ced)
+ 
+ - Sing Up
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/82eda045-b192-43b0-a64d-30b118940851)
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/0c801ec8-6716-444e-8b64-5ed72485f744)
+
+- Login
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/3eddfa6b-b36b-46d9-9145-40d9ac944493)
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/c96fd63c-29af-47bc-b73d-ba928ff67ec2)
+
+
 
 ### ✅ `Funcionalidad 2:`
+Topic Controller 
   #### 
-![image]()
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/6a4096f1-b981-441e-b898-5f52ddc61e91)
+
+- Post
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/932e953a-173a-44f9-ba7c-86fdf61c200e)
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/2a0bf301-2f3a-49a5-aa1f-076a92f1c7da)
+
+- Get
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/f82989d0-5fa6-47f2-810c-46c738771e40)
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/a0ab7aac-8927-4923-9d43-35507011486d)
+
+-Get by Id
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/f4ad0613-8646-41d1-977a-66fce6775591)
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/4cb2f41a-ba1c-4ed8-8255-2b7b4ead7460)
+
+
+- Put
+  ![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/5895eb95-26cf-485d-8e7c-2877f2d0f192)
+  ![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/24a2aca0-1649-4f8b-ae91-263e61506797)
+
+- Delete
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/2cfef5e5-be42-4520-b697-9dd81dc48da9)
+![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/4f34ce70-60f2-471a-8330-d63c1343d9de)
+
 
 ### ✅ `Funcionalidad 3:` 
   #### 
