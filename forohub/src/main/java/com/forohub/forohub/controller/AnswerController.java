@@ -29,9 +29,7 @@ public class AnswerController {
     @PostMapping
     @Transactional
     public ResponseEntity<AnswerResponseDTO> create(@RequestBody @Valid AnswerNewDTO answer) {
-
-        AnswerResponseDTO answerResponseDTO=new AnswerResponseDTO(answerService.save(answer));
-        return ResponseEntity.ok(answerResponseDTO);
+        return ResponseEntity.ok(answerService.save(answer));
     }
 
 
@@ -42,8 +40,7 @@ public class AnswerController {
 
     @GetMapping("/{id}")
     public ResponseEntity<AnswerResponseDTO> findById(@PathVariable Long id) {
-        AnswerResponseDTO answerResponseDTO=new AnswerResponseDTO(answerService.findById(id));
-        return ResponseEntity.ok(answerResponseDTO);
+        return ResponseEntity.ok(answerService.findById(id));
     }
 
     @GetMapping("/topic/{id}")
@@ -52,12 +49,10 @@ public class AnswerController {
     }
 
 
-
     @PutMapping
     @Transactional
     public ResponseEntity<AnswerResponseDTO> edit(@RequestBody @Valid AnswerUpdatedDTO answer){
-        AnswerResponseDTO answerResponseDTO =new AnswerResponseDTO(answerService.edit(answer));
-        return ResponseEntity.ok(answerResponseDTO);
+        return ResponseEntity.ok(answerService.edit(answer));
     }
 
     @DeleteMapping("/{id}")

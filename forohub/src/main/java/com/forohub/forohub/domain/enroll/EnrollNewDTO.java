@@ -4,8 +4,8 @@ import jakarta.validation.constraints.NotNull;
 
 public record EnrollNewDTO(
         @NotNull
-        Long user_id,
+        Long userId,
         @NotNull
-        Long course_id
+        Long courseId
 ) {
 }

@@ -28,12 +28,12 @@ public class EnrollService {
 
     public Enroll enrollToCourse (EnrollNewDTO enrollNewDTO){
 
-        Optional<Course> course=courseRepository.findByIdAndStatusTrue(enrollNewDTO.course_id());
+        Optional<Course> course=courseRepository.findByIdAndStatusTrue(enrollNewDTO.courseId());
         if(course.isEmpty()){
             throw new IntegrityValidation("Course Not Found");
         }
 
-        Optional<User> user=userRepository.findById(enrollNewDTO.user_id());
+        Optional<User> user=userRepository.findById(enrollNewDTO.userId());
         if(user.isEmpty()){
             throw new IntegrityValidation("User Not Found");
         }

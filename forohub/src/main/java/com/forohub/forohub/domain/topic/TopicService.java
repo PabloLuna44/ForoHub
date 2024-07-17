@@ -31,10 +31,10 @@ public class TopicService {
     @Autowired
     List<TopicValidator> validations;
 
-    public Topic save(TopicNewDTO topic){
+    public TopicResponseDTO save(TopicNewDTO topic){
 
-        Optional<User> user=userRepository.findById(topic.user_id());
-        Optional<Course> course=courseRepository.findById(topic.course_id());
+        Optional<User> user=userRepository.findById(topic.userId());
+        Optional<Course> course=courseRepository.findById(topic.courseId());
         LocalDateTime date=LocalDateTime.now();
 
         if(user.isEmpty()){
@@ -45,24 +45,29 @@ public class TopicService {
         }
 
         Topic newTopic=new Topic(topic.title(),topic.message(),date,user.get(),course.get());
-        topicRepository.save(newTopic);
-        return newTopic;
+
+
+        TopicResponseDTO topicResponseDTO=new TopicResponseDTO(topicRepository.save(newTopic));
+
+        return topicResponseDTO;
     }
 
     public Page<TopicResponseDTO> findAll(Pageable pageable){
         return topicRepository.findByStatusTrue(pageable).map(TopicResponseDTO::new);
     }
 
-    public Topic findById(Long id){
+    public TopicResponseDTO findById(Long id){
         Optional<Topic> topic=topicRepository.findByIdAndStatusTrue(id);
 
         if(topic.isEmpty()){
             throw new IntegrityValidation("Topic Not Found");
         }
-        return topic.get();
+        TopicResponseDTO topicResponseDTO=new TopicResponseDTO(topic.get());
+
+        return topicResponseDTO;
     }
 
-    public Topic edit(TopicUpdateDTO topicUpdateDTO){
+    public TopicResponseDTO edit(TopicUpdateDTO topicUpdateDTO){
         if (topicRepository.findById(topicUpdateDTO.id()).isEmpty()){
             throw new IntegrityValidation("Topic Not Found");
         }
@@ -70,15 +75,39 @@ public class TopicService {
 
         Topic topic=topicRepository.getReferenceById(topicUpdateDTO.id());
 
-        if(topicUpdateDTO.course_id()!=null){
-            Optional<Course> course=courseRepository.findById(topicUpdateDTO.course_id());
+        if(topicUpdateDTO.courseId()!=null){
+            Optional<Course> course=courseRepository.findById(topicUpdateDTO.courseId());
             topic.update(topicUpdateDTO.title(),topicUpdateDTO.message(),topicUpdateDTO.status(),course.orElse(null));
         }else{
             topic.update(topicUpdateDTO.title(),topicUpdateDTO.message(),topicUpdateDTO.status(),null);
         }
 
+        TopicResponseDTO topicResponseDTO=new TopicResponseDTO(topic);
 
-        return topic;
+        return topicResponseDTO;
+    }
+
+    public Page<TopicResponseDTO> findByUser(Pageable pageable,Long id){
+
+        Optional<User> user=userRepository.findById(id);
+
+        if(user.isEmpty()){
+            throw new IntegrityValidation("User not found");
+        }
+
+        return topicRepository.findByUser(pageable,user.get()).map(TopicResponseDTO::new);
+
+    }
+
+    public Page<TopicResponseDTO> findByCourse(Pageable pageable,Long id){
+
+        Optional<Course> course=courseRepository.findById(id);
+
+        if(course.isEmpty()){
+            throw new IntegrityValidation("Course not found");
+        }
+
+        return topicRepository.findByCourseAndStatusTrue(pageable,course.get()).map(TopicResponseDTO::new);
     }
 
 //    Soft Delete

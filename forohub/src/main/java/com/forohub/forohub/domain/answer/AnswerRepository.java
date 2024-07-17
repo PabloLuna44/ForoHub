@@ -15,6 +15,6 @@ public interface AnswerRepository extends JpaRepository<Answer,Long> {
 
     Optional<Answer> findByIdAndStatusTrue(Long aLong);
 
-    Page<Answer> findByTopic(Topic topic,Pageable pageable);
+    Page<Answer> findByTopicAndStatusTrue(Topic topic,Pageable pageable);
 }
 

@@ -9,7 +9,7 @@ public record TopicNewDTO(
           @NotBlank
           String message,
           @NotNull
-          Long user_id,
+          Long userId,
           @NotNull
-          Long course_id) {
+          Long courseId) {
 }
