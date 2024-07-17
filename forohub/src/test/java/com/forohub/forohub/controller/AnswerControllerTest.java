@@ -55,6 +55,7 @@ class AnswerControllerTest {
     @MockBean
     private AnswerService answerService;
 
+
     @Test
     @DisplayName("This method should return status http 200 when the data are valid")
     @WithMockUser
@@ -62,15 +63,11 @@ class AnswerControllerTest {
         //Given
         LocalDateTime now=LocalDateTime.now();
         AnswerNewDTO answerNewDTO=new AnswerNewDTO("New Answer",1L,1L);
-        UserResponseDTO userResponseDTO=new UserResponseDTO(1L,"Forohub","forohub@gmail.com");
-        CourseResponseDTO courseResponseDTO=new CourseResponseDTO(1L,"New Course","this is a course",now,now);
-        TopicResponseDTO topicResponseDTO=new TopicResponseDTO(1L,"New Topic","this is a topic",now,now,userResponseDTO,courseResponseDTO);
 
 
-        AnswerResponseDTO answerResponseDTO=new AnswerResponseDTO(null,"New Answer",userResponseDTO,topicResponseDTO,now,now);
 
         //When
-        when(answerService.save(any())).thenReturn(answerResponseDTO);
+
 
         var response= mvc.perform(post("/answer")
                         .contentType(MediaType.APPLICATION_JSON)

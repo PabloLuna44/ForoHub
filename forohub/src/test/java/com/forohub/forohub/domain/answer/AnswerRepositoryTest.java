@@ -25,10 +25,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class AnswerRepositoryTest {
 
     @Autowired
-    AnswerRepository answerRepository;
+    private AnswerRepository answerRepository;
 
      @Autowired
-    TopicRepository topicRepository;
+    private TopicRepository topicRepository;
 
     @Autowired
     private TestEntityManager em;

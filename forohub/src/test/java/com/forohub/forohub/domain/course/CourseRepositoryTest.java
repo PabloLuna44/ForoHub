@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CourseRepositoryTest {
 
     @Autowired
-    CourseRepository courseRepository;
+    private CourseRepository courseRepository;
 
     @Test
     @DisplayName("It should return courses by id with status true")

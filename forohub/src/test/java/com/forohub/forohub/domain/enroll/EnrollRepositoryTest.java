@@ -21,10 +21,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class EnrollRepositoryTest {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Autowired
-    EnrollRepository enrollRepository;
+    private EnrollRepository enrollRepository;
 
     @Test
     @DisplayName("It should return all topic by user")

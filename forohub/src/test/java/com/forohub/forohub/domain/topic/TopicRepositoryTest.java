@@ -25,13 +25,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class TopicRepositoryTest {
 
     @Autowired
-    TopicRepository topicRepository;
+    private TopicRepository topicRepository;
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Autowired
-    CourseRepository courseRepository;
+    private CourseRepository courseRepository;
 
 
 
