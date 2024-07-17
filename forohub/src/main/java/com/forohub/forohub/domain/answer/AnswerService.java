@@ -25,21 +25,22 @@ public class AnswerService {
     @Autowired
     TopicRepository topicRepository;
 
-    public Answer save(AnswerNewDTO answerNew){
+    public AnswerResponseDTO save(AnswerNewDTO answerNew){
 
-        Optional<Topic> topic = topicRepository.findByIdAndStatusTrue(answerNew.topic_id());
+        Optional<Topic> topic = topicRepository.findByIdAndStatusTrue(answerNew.topicId());
         if(topic.isEmpty()){
             throw new IntegrityValidation("Topic Not Found");
         }
-        Optional<User> user =userRepository.findById(answerNew.user_id());
+        Optional<User> user =userRepository.findById(answerNew.userId());
 
         if(user.isEmpty()){
             throw new IntegrityValidation("User Not Found");
         }
 
         Answer answer=new Answer(answerNew.comment(),user.get(),topic.get());
+        AnswerResponseDTO answerResponseDTO=new AnswerResponseDTO(answerRepository.save(answer));
 
-        return answerRepository.save(answer);
+        return answerResponseDTO;
     }
 
     public Page<AnswerResponseDTO> findAll(Pageable pageable){
@@ -57,20 +58,20 @@ public class AnswerService {
         }
 
 
-        return answerRepository.findByTopic(topic.get(),pageable).map(AnswerResponseDTO::new);
+        return answerRepository.findByTopicAndStatusTrue(topic.get(),pageable).map(AnswerResponseDTO::new);
     }
 
-    public Answer findById(Long id){
+    public AnswerResponseDTO findById(Long id){
         Optional<Answer> answer= answerRepository.findByIdAndStatusTrue(id);
 
         if(answer.isEmpty()){
             throw new IntegrityValidation("Answer Not Found");
         }
-
-        return answer.get();
+        AnswerResponseDTO answerResponseDTO=new AnswerResponseDTO(answer.get());
+        return answerResponseDTO;
     }
 
-    public Answer edit(AnswerUpdatedDTO answerUpdatedDTO){
+    public AnswerResponseDTO edit(AnswerUpdatedDTO answerUpdatedDTO){
 
         Answer answer=answerRepository.getReferenceById(answerUpdatedDTO.id());
 
@@ -79,8 +80,9 @@ public class AnswerService {
         }
 
         answer.update(answerUpdatedDTO);
+        AnswerResponseDTO answerResponseDTO=new AnswerResponseDTO(answer);
 
-        return answer;
+        return answerResponseDTO;
     }
 
     //    Soft Delete

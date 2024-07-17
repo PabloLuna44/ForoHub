@@ -19,9 +19,9 @@ public class EditTopic implements TopicValidator{
 
     public void validate(TopicUpdateDTO topicUpdateDTO) {
 
-        if(topicUpdateDTO.course_id()!=null){
+        if(topicUpdateDTO.courseId()!=null){
 
-            Optional<Course> course = courseRepository.findById(topicUpdateDTO.course_id());
+            Optional<Course> course = courseRepository.findById(topicUpdateDTO.courseId());
 
             if(course.isEmpty()){
                 throw new IntegrityValidation("Course Not found");

@@ -13,9 +13,9 @@ public record AnswerNewDTO (
          @NotBlank
          String comment,
          @NotNull
-         Long  user_id,
+         Long  userId,
          @NotNull
-         Long topic_id
+         Long topicId
 ){
 
 

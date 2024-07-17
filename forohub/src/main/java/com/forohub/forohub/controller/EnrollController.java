@@ -29,7 +29,7 @@ public class EnrollController {
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("user/{id}")
     public ResponseEntity<Page<EnrollResponseDTO>> allCourseByUser(@PathVariable Long id,@PageableDefault Pageable pageable ){
 
         return ResponseEntity.ok(enrollService.allCourseByUser(id,pageable));

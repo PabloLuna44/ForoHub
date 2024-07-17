@@ -9,7 +9,7 @@ public record TopicUpdateDTO(
         String title,
         String message,
         Boolean status,
-        Long course_id
+        Long courseId
 
 ) {
 

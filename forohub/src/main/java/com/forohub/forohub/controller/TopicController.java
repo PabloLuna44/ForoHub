@@ -29,9 +29,7 @@ public class TopicController {
     @PostMapping
     @Transactional
     public ResponseEntity<TopicResponseDTO> create(@RequestBody @Valid TopicNewDTO topic) {
-
-            TopicResponseDTO topicResponseDTO=new TopicResponseDTO(topicService.save(topic));
-            return ResponseEntity.ok(topicResponseDTO);
+            return ResponseEntity.ok(topicService.save(topic));
     }
 
 
@@ -42,22 +40,35 @@ public class TopicController {
 
     @GetMapping("/{id}")
     public ResponseEntity<TopicResponseDTO> findById(@PathVariable Long id) {
-        TopicResponseDTO topicResponseDTO=new TopicResponseDTO(topicService.findById(id));
-        return ResponseEntity.ok(topicResponseDTO);
+        return ResponseEntity.ok(topicService.findById(id));
     }
+
+    @GetMapping("/user/{id}")
+    public ResponseEntity<Page<TopicResponseDTO>> findByUser(@PageableDefault Pageable pageable,@PathVariable Long id){
+
+        return ResponseEntity.ok(topicService.findByUser(pageable, id));
+    }
+
+    @GetMapping("/course/{id}")
+    public ResponseEntity<Page<TopicResponseDTO>> findByCourse(@PageableDefault Pageable pageable,@PathVariable Long id){
+
+        return ResponseEntity.ok(topicService.findByCourse(pageable,id));
+    }
+
+
 
 
     @PutMapping
     @Transactional
     public ResponseEntity<TopicResponseDTO> edit(@RequestBody @Valid TopicUpdateDTO topic){
-        TopicResponseDTO topicResponseDTO=new TopicResponseDTO(topicService.edit(topic));
-        return ResponseEntity.ok(topicResponseDTO);
+
+        return ResponseEntity.ok(topicService.edit(topic));
     }
 
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity delete(@PathVariable Long id) {
-        System.out.println(id);
+//        System.out.println(id);
         topicService.delete(id);
         return ResponseEntity.noContent().build();
     }
