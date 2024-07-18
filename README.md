@@ -124,7 +124,7 @@ Authentication Controller
 ### ✅ `Funcionalidad 2:`
 Topic Controller 
   #### 
-![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/6a4096f1-b981-441e-b898-5f52ddc61e91)
+![image](https://github.com/user-attachments/assets/60410646-40d3-4d84-9821-9cfa1f406b58)
 
 - Post
   
@@ -163,7 +163,7 @@ Topic Controller
 ### ✅ `Funcionalidad 3:` 
 Answer Controller
   #### 
-![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/3f8de4b4-51d4-47fb-92d5-68570fe2a67e)
+![image](https://github.com/user-attachments/assets/40b546af-2d10-4f5d-a021-68359fb9d4e1)
 
 - Post
 ![image](https://github.com/PabloLuna44/ForoHub/assets/119721670/f524fe0e-2def-4223-b6e9-4c0441bdfac8)
