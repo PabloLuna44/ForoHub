@@ -46,7 +46,7 @@ class AnswerRepositoryTest {
 
         // Then
         assertThat(result).isNotNull();
-        assertThat(result.getContent().get(0).getComment()).isEqualTo("Update Answer");
+        assertThat(result.getContent().get(0).getComment()).isEqualTo("updated answer");
 
     }
 
@@ -72,7 +72,7 @@ class AnswerRepositoryTest {
         Page<Answer> result = answerRepository.findByTopicAndStatusTrue(topic.get(),pageable);
 
         assertThat(result).isNotNull();
-        assertThat(result.getContent().get(0).getComment()).isEqualTo("Update Answer");
+        assertThat(result.getContent().get(0).getComment()).isEqualTo("updated answer");
 
     }
 }

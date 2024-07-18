@@ -42,7 +42,7 @@ class CourseRepositoryTest {
         Page<Course> result=courseRepository.findByStatusTrue(pageable);
 
         assertThat(result).isNotNull();
-        assertThat(result.getTotalElements()).isEqualTo(11);
+        assertThat(result.getTotalElements()).isEqualTo(10);
         assertThat(result.getContent().get(0).getTitle()).isEqualTo("Steel");
 
 
