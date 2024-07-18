@@ -26,7 +26,7 @@ public class EnrollService {
     UserRepository userRepository;
 
 
-    public Enroll enrollToCourse (EnrollNewDTO enrollNewDTO){
+    public EnrollResponseDTO enrollToCourse (EnrollNewDTO enrollNewDTO){
 
         Optional<Course> course=courseRepository.findByIdAndStatusTrue(enrollNewDTO.courseId());
         if(course.isEmpty()){
@@ -40,7 +40,7 @@ public class EnrollService {
 
         Enroll enroll=new Enroll(user.get(),course.get());
 
-        return enrollRepository.save(enroll);
+        return new EnrollResponseDTO(enrollRepository.save(enroll));
 
     }
 

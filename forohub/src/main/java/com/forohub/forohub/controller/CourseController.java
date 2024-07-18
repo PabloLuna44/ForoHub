@@ -6,6 +6,7 @@ import com.forohub.forohub.domain.course.CourseResponseDTO;
 import com.forohub.forohub.domain.course.CourseService;
 import com.forohub.forohub.domain.course.CourseUpdateDTO;
 import com.forohub.forohub.domain.topic.TopicResponseDTO;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 
@@ -29,30 +30,31 @@ public class CourseController {
 
     @PostMapping
     @Transactional
+    @Operation(
+            summary = "Register New Course",
+            description="",
+            tags = {"course","post"}
+    )
     public ResponseEntity<CourseResponseDTO> create(@RequestBody @Valid CourseNewDTO course) {
-        CourseResponseDTO courseResponseDTO=new CourseResponseDTO(courseService.save(course));
-        return ResponseEntity.ok(courseResponseDTO);
+        return ResponseEntity.ok(courseService.save(course));
     }
 
 
     @GetMapping
     public ResponseEntity<Page<CourseResponseDTO>> findAll(@PageableDefault Pageable pageable) {
-
         return ResponseEntity.ok(courseService.findAll(pageable));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<CourseResponseDTO> findById(@PathVariable Long id) {
-        CourseResponseDTO courseResponseDTO=new CourseResponseDTO(courseService.findById(id));
-        return ResponseEntity.ok(courseResponseDTO);
+        return ResponseEntity.ok(courseService.findById(id));
     }
 
 
     @PutMapping
     @Transactional
     public ResponseEntity<CourseResponseDTO> edit(@RequestBody @Valid CourseUpdateDTO course){
-        CourseResponseDTO courseResponseDTO=new CourseResponseDTO(courseService.edit(course));
-        return ResponseEntity.ok(courseResponseDTO);
+        return ResponseEntity.ok(courseService.edit(course));
     }
 
     @DeleteMapping("/{id}")

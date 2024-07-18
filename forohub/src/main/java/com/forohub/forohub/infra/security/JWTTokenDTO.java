@@ -1,5 +1,11 @@
 package com.forohub.forohub.infra.security;
 
-public record JWTTokenDTO(String JWT) {
+
+import com.fasterxml.jackson.annotation.JsonAlias;
+
+public record JWTTokenDTO(
+
+        @JsonAlias("JWT") String JWT
+) {
 
 }
