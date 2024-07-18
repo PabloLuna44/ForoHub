@@ -36,7 +36,6 @@ class TopicRepositoryTest {
 
 
     @Test
-    @DisplayName("It should return all topic with status true")
     void findByStatusTrue() {
 
         Pageable pageable = PageRequest.of(0, 10);
@@ -48,7 +47,6 @@ class TopicRepositoryTest {
     }
 
     @Test
-    @DisplayName("It should return all topics by user")
     void findByUser() {
 
         Long id=1L;
@@ -66,7 +64,6 @@ class TopicRepositoryTest {
     }
 
     @Test
-    @DisplayName("It should return all topics by course")
     void findByCourseAndStatusTrue() {
         Long id=1L;
 
@@ -82,7 +79,6 @@ class TopicRepositoryTest {
     }
 
     @Test
-    @DisplayName("It should return topic by id with status true")
     void findByIdAndStatusTrue() {
 
         Long id=1L;

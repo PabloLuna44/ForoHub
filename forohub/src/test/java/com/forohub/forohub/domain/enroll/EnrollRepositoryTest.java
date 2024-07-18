@@ -27,7 +27,6 @@ class EnrollRepositoryTest {
     private EnrollRepository enrollRepository;
 
     @Test
-    @DisplayName("It should return all topic by user")
     void findByUser() {
         Long id=10L;
         Pageable pageable = PageRequest.of(0, 10);

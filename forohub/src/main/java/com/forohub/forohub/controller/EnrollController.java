@@ -21,8 +21,8 @@ public class EnrollController {
     EnrollService enrollService;
 
     @PostMapping
-    public ResponseEntity<EnrollResponseDTO> enrollToCourse(@RequestBody @Valid EnrollNewDTO courseNewDTO){
-        return ResponseEntity.ok(enrollService.enrollToCourse(courseNewDTO));
+    public ResponseEntity<EnrollResponseDTO> enrollToCourse(@RequestBody @Valid EnrollNewDTO enrollNewDTO){
+        return ResponseEntity.ok(enrollService.enrollToCourse(enrollNewDTO));
     }
 
 

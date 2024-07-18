@@ -22,7 +22,6 @@ class CourseRepositoryTest {
     private CourseRepository courseRepository;
 
     @Test
-    @DisplayName("It should return courses by id with status true")
     void findByIdAndStatusTrue() {
 
         Long id=1L;
@@ -36,7 +35,6 @@ class CourseRepositoryTest {
     }
 
     @Test
-    @DisplayName("It should return all courses with status true")
     void findByStatusTrue() {
 
         Pageable pageable = PageRequest.of(0, 10);
