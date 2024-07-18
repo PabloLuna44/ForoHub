@@ -30,11 +30,6 @@ public class CourseController {
 
     @PostMapping
     @Transactional
-    @Operation(
-            summary = "Register New Course",
-            description="",
-            tags = {"course","post"}
-    )
     public ResponseEntity<CourseResponseDTO> create(@RequestBody @Valid CourseNewDTO course) {
         return ResponseEntity.ok(courseService.save(course));
     }

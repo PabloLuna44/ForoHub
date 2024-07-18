@@ -16,6 +16,10 @@ public record UserRegisterDTO(
          String email,
          @NotBlank
          @Size(min = 8, max = 20, message = "La contraseña debe tener entre 8 y 20 caracteres")
+         @Pattern(
+                 regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$",
+                 message = "La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un dígito y un carácter especial"
+         )
          String password
 ) {
 }

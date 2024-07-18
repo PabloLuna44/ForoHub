@@ -56,7 +56,7 @@ class AuthenticationControllerTest {
     @Test
     void authentication() throws Exception {
 
-        UserAuthenticationDTO userAuthenticationDTO=new UserAuthenticationDTO("forohub@example.com","123456789");
+        UserAuthenticationDTO userAuthenticationDTO=new UserAuthenticationDTO("forohub@example.com","Password1234?");
         DataConvert dataConvert=new DataConvert();
 
         var response = mvc.perform(post("/login")
@@ -75,7 +75,7 @@ class AuthenticationControllerTest {
 
     @Test
     void register() throws  Exception{
-        UserRegisterDTO userRegisterDTO=new UserRegisterDTO("forohub", "forohub", "ForoHub", "forohub@example.com", "12345678");
+        UserRegisterDTO userRegisterDTO=new UserRegisterDTO("forohub", "forohub", "ForoHub", "forohub@example.com", "Password1234?");
         UserResponseDTO userResponseDTO=new UserResponseDTO(1L,"Forohub","forohub@example.com");
 
         when(userService.register(userRegisterDTO)).thenReturn(userResponseDTO);
