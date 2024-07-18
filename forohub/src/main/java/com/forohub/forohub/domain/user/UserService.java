@@ -15,11 +15,11 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
 
-    public User register(UserRegisterDTO userRegister){
+    public UserResponseDTO register(UserRegisterDTO userRegister){
         String pwdEncode=passwordEncoder.encode(userRegister.password());
         User user=new User(userRegister.name(),userRegister.last_name(),userRegister.username(),userRegister.email(),pwdEncode);
 
-        return userRepository.save(user);
+        return new UserResponseDTO(userRepository.save(user));
     }
 
 }

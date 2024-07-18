@@ -44,7 +44,7 @@ public class AnswerController {
     }
 
     @GetMapping("/topic/{id}")
-    public ResponseEntity<Page<AnswerResponseDTO>> findById(@PathVariable Long id,@PageableDefault Pageable pageable) {
+    public ResponseEntity<Page<AnswerResponseDTO>> findByTopic(@PathVariable Long id,@PageableDefault Pageable pageable) {
         return ResponseEntity.ok(answerService.findByTopic(id,pageable));
     }
 

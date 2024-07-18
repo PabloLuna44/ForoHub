@@ -18,9 +18,9 @@ public class CourseService {
 
 
 
-    public Course save(CourseNewDTO courseNew){
+    public CourseResponseDTO save(CourseNewDTO courseNew){
         Course course= new Course(courseNew);
-        return courseRepository.save(course);
+        return  new CourseResponseDTO(courseRepository.save(course));
     }
 
     public Page<CourseResponseDTO> findAll(Pageable pageable){
@@ -28,17 +28,18 @@ public class CourseService {
         return courseRepository.findByStatusTrue(pageable).map(CourseResponseDTO::new);
     }
 
-    public Course findById(Long id){
+    public CourseResponseDTO findById(Long id){
 
         Optional<Course> course=courseRepository.findByIdAndStatusTrue(id);
 
         if(course.isEmpty()){
             throw new IntegrityValidation("Course Not Found");
         }
-        return course.get();
+
+        return new CourseResponseDTO(course.get());
     }
 
-    public Course edit(CourseUpdateDTO courseUpdateDTO){
+    public CourseResponseDTO edit(CourseUpdateDTO courseUpdateDTO){
 
         Course course=courseRepository.getReferenceById(courseUpdateDTO.id());
 
@@ -46,7 +47,7 @@ public class CourseService {
             throw new IntegrityValidation("Course Not Found");
         }        course.update(courseUpdateDTO);
 
-        return course;
+        return new CourseResponseDTO(course);
 
     }
 

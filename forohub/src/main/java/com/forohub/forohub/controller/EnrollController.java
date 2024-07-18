@@ -22,18 +22,13 @@ public class EnrollController {
 
     @PostMapping
     public ResponseEntity<EnrollResponseDTO> enrollToCourse(@RequestBody @Valid EnrollNewDTO courseNewDTO){
-
-         EnrollResponseDTO enroll=new EnrollResponseDTO(enrollService.enrollToCourse(courseNewDTO));
-
-        return ResponseEntity.ok(enroll);
+        return ResponseEntity.ok(enrollService.enrollToCourse(courseNewDTO));
     }
 
 
     @GetMapping("user/{id}")
     public ResponseEntity<Page<EnrollResponseDTO>> allCourseByUser(@PathVariable Long id,@PageableDefault Pageable pageable ){
-
         return ResponseEntity.ok(enrollService.allCourseByUser(id,pageable));
-
     }
 
 

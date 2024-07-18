@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping()
+@RequestMapping
 public class AuthenticationController {
 
     @Autowired
@@ -39,10 +39,7 @@ public class AuthenticationController {
 
     @PostMapping("/sing-up")
     public ResponseEntity<UserResponseDTO> register(@RequestBody @Valid UserRegisterDTO user){
-
-        UserResponseDTO userResponseDTO=new UserResponseDTO(userService.register(user));
-
-        return ResponseEntity.ok(userResponseDTO);
+        return ResponseEntity.ok(userService.register(user));
     }
 
 }
